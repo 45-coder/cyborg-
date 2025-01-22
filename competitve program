@@ -1,0 +1,8 @@
+def find_the_winner(n, k):
+    def josephus(n, k):
+        if n == 1:
+        return (josephus(n - 1, k) + k) % n)
+    return josephus(n, k) + 1
+n = 5
+k = 2
+print(find_the_winner(n, k))
